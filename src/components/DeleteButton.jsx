@@ -4,6 +4,7 @@ import gql from 'graphql-tag';
 import { useMutation } from '@apollo/react-hooks';
 
 import { FETCH_POSTS_QUERY } from '../util/graphql';
+import MyPopup from '../util/MyPopup';
 
 const DeleteButton = (props) => {
 	const [confirmOpen, setConfirmOpen] = useState(false);
@@ -24,14 +25,19 @@ const DeleteButton = (props) => {
 
 	return (
 		<Fragment>
-			<Button
-				as="div"
-				color="red"
-				floated="right"
-				onClick={() => setConfirmOpen(true)}
+			<MyPopup
+				content={`${props.commentId ? 'Delete Comment' : 'Delete Post'} `}
 			>
-				<Icon name="trash" style={{ margin: 0 }} />
-			</Button>
+				<Button
+					as="div"
+					color="red"
+					floated="right"
+					onClick={() => setConfirmOpen(true)}
+				>
+					<Icon name="trash" style={{ margin: 0 }} />
+				</Button>
+			</MyPopup>
+
 			<Confirm
 				open={confirmOpen}
 				onCancel={() => setConfirmOpen(false)}

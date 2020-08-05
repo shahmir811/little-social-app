@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
 
+import MyPopup from '../util/MyPopup';
+
 const LikeButton = (props) => {
 	const { id, likeCount, likes } = props.post;
 	const { user } = props;
@@ -38,7 +40,7 @@ const LikeButton = (props) => {
 
 	return (
 		<Button as="div" labelPosition="right" onClick={likePost}>
-			{likeButton}
+			<MyPopup content={liked ? 'Unlike' : 'Like'}>{likeButton}</MyPopup>
 			<Label basic color="teal" pointing="left">
 				{likeCount}
 			</Label>

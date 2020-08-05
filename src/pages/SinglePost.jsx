@@ -13,6 +13,7 @@ import {
 } from 'semantic-ui-react';
 
 import AuthContext from '../context/auth/authContext';
+import MyPopup from '../util/MyPopup';
 
 import LikeButton from '../components/LikeButton';
 import DeleteButton from '../components/DeleteButton';
@@ -98,18 +99,21 @@ const SinglePost = (props) => {
 							<hr />
 							<Card.Content extra>
 								<LikeButton user={user} post={post} />
-								<Button
-									as="div"
-									labelPosition="right"
-									onClick={() => console.log('Comment on post')}
-								>
-									<Button basic color="blue">
-										<Icon name="comments" />
+								<MyPopup content="Comment on this post">
+									<Button
+										as="div"
+										labelPosition="right"
+										onClick={() => console.log('Comment on post')}
+									>
+										<Button basic color="blue">
+											<Icon name="comments" />
+										</Button>
+										<Label basic color="blue" pointing="left">
+											{commentCount}
+										</Label>
 									</Button>
-									<Label basic color="blue" pointing="left">
-										{commentCount}
-									</Label>
-								</Button>
+								</MyPopup>
+
 								{user && user.username === username && (
 									<DeleteButton
 										postId={post.id}
