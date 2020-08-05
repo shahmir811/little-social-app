@@ -36,7 +36,7 @@ const Register = (props) => {
 	const [addUser, { loading }] = useMutation(REGISTER_USER, {
 		update: (proxy, result) => {
 			// update function will be executed if mutation is successfully executed
-			login(result.data.login);
+			login(result.data.register);
 			props.history.push('/');
 		},
 		onError: (err) => {

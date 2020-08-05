@@ -23,9 +23,9 @@ const PostForm = () => {
 	};
 
 	const [createPost, { error }] = useMutation(CREATE_POST_MUTATION, {
-		// update: (proxy, result) => {
-		// 	values.body = '';
-		// },
+		update: (proxy, result) => {
+			values.body = '';
+		},
 		onError: (err) => {
 			console.log('PostForm err', err);
 		},
