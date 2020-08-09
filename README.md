@@ -26,7 +26,7 @@ yarn test   # For execution of tests
 yarn buid   # Build for production
 ```
 
-### Tech use for frontend code
+### NPM packages use for frontend code
 
 - [Apollo Hooks] - React Apollo Hooks
 - [Apollo Cache Inmemory] - Core abstract of Caching layer for Apollo Client
