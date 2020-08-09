@@ -1,68 +1,51 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Little Social App
 
-## Available Scripts
+> React application using React Hooks, Graphql and Apollo Client.
 
-In the project directory, you can run:
+---
 
-### `yarn start`
+### Server Side Code And Setup
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+You can download the server side code from [here]: https://github.com/hidjou/classsed-merng-server
+Change the database connection at config.js
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Run server side code by executing following commands:
 
-### `yarn test`
+```bash
+npm run serve  # Backend application starts at port 5000
+npm run start  # Backend application starts at port 5000
+```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Run Application
 
-### `yarn build`
+You can run this front end application by executing following commands:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+yarn start  # Application starts at port 3000
+yarn test   # For execution of tests
+yarn buid   # Build for production
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Tech use for frontend code
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [Apollo Hooks] - React Apollo Hooks
+- [Apollo Cache Inmemory] - Core abstract of Caching layer for Apollo Client
+- [Apollo Client] - A simple yet functional GraphQL client
+- [Apollo Link Context] - An easy way to set and cache context changes for Apollo Link
+- [Apollo Link HTTP] - HTTP transport layer for GraphQL
+- [Graphql] - A Query Language and Runtime which can target any service
+- [Graphql Tag] - A JavaScript template literal tag that parses GraphQL queries
+- [JWT Decode] - Decode JWT tokens, mostly useful for browser applications
+- [moment] - Parse, validate, manipulate, and display dates and times
+- [Semantic UI React] - The official Semantic-UI-React integration
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+[apollo hooks]: https://www.npmjs.com/package/@apollo/react-hooks
+[apollo cache inmemory]: https://www.npmjs.com/package/apollo-cache-inmemory
+[apollo client]: https://www.npmjs.com/package/apollo-client
+[apollo link context]: https://www.npmjs.com/package/apollo-link-context
+[apollo link http]: https://www.npmjs.com/package/apollo-link-http
+[graphql]: https://www.npmjs.com/package/graphql
+[graphql tag]: https://www.npmjs.com/package/graphql-tag
+[jwt decode]: https://www.npmjs.com/package/jwt-decode
+[moment]: https://momentjs.com/
+[semantic ui react]: https://www.npmjs.com/package/semantic-ui-react
