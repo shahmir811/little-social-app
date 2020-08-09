@@ -6,7 +6,7 @@
 
 ### Server Side Code And Setup
 
-You can download the server side code from [here]: https://github.com/hidjou/classsed-merng-server
+You can download the server side code from [here](https://github.com/hidjou/classsed-merng-server).
 Change the database connection at config.js
 
 Run server side code by executing following commands:
